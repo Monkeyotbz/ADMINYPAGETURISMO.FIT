@@ -1,0 +1,13 @@
+-- ================================================
+-- SOLUCIÓN: Deshabilitar confirmación de email
+-- ================================================
+-- Ejecuta esto en Supabase SQL Editor
+
+-- Esto permite que los usuarios se registren sin necesidad de confirmar email
+-- IMPORTANTE: Esto es temporal para desarrollo, en producción debes configurar SMTP
+
+-- No hay script SQL para esto, debes ir a:
+-- Supabase Dashboard → Authentication → Providers → Email
+-- Y DESACTIVAR "Confirm email"
+
+-- Mientras tanto, podemos hacer que la app funcione así:

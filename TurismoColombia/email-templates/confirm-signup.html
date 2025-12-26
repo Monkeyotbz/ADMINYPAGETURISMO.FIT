@@ -1,0 +1,179 @@
+<!-- Template de Email de Confirmación - Turismo Colombia -->
+<!-- Pega esto en Supabase → Auth → Email Templates → Confirm signup -->
+
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .logo {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .content {
+      padding: 40px 30px;
+      color: #374151;
+    }
+    .greeting {
+      font-size: 24px;
+      font-weight: bold;
+      color: #1f2937;
+      margin-bottom: 20px;
+    }
+    .message {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #4b5563;
+    }
+    .button-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .confirm-button {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+      transition: transform 0.2s;
+    }
+    .confirm-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+    }
+    .divider {
+      border-top: 2px solid #e5e7eb;
+      margin: 30px 0;
+    }
+    .info-box {
+      background-color: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+    .footer {
+      background-color: #f9fafb;
+      padding: 30px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+      border-top: 1px solid #e5e7eb;
+    }
+    .social-icons {
+      margin: 20px 0;
+    }
+    .social-icon {
+      display: inline-block;
+      margin: 0 10px;
+      color: #dc2626;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .small-text {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <!-- Header con logo -->
+    <div class="header">
+      <img src="https://raw.githubusercontent.com/Monkeyotbz/turismocolombia-website/main/public/turismo%20colombia%20fit%20logo-02.png" alt="Turismo Colombia" class="logo">
+      <h1 style="color: white; margin: 0; font-size: 28px;">¡Bienvenido a Turismo Colombia! 🌴</h1>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content">
+      <div class="greeting">
+        ¡Hola! 👋
+      </div>
+
+      <div class="message">
+        Gracias por registrarte en <strong>Turismo Colombia</strong>, tu plataforma para descubrir las mejores experiencias turísticas en nuestro hermoso país.
+      </div>
+
+      <div class="message">
+        Para completar tu registro y comenzar a explorar increíbles destinos, hospedajes y tours, solo necesitas confirmar tu dirección de correo electrónico.
+      </div>
+
+      <!-- Botón de confirmación -->
+      <div class="button-container">
+        <a href="{{ .ConfirmationURL }}" class="confirm-button">
+          ✓ Confirmar mi correo electrónico
+        </a>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Información adicional -->
+      <div class="info-box">
+        <strong>⏰ Importante:</strong> Este enlace expirará en 24 horas por seguridad.
+      </div>
+
+      <div class="message" style="margin-top: 30px;">
+        Una vez confirmado tu email, podrás:
+        <ul style="line-height: 1.8; color: #4b5563;">
+          <li>🏨 Reservar hospedajes exclusivos</li>
+          <li>🗺️ Descubrir tours únicos</li>
+          <li>💰 Acceder a ofertas especiales</li>
+          <li>👤 Gestionar tus reservas fácilmente</li>
+          <li>⭐ Guardar tus favoritos</li>
+        </ul>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="message" style="font-size: 14px; color: #6b7280;">
+        Si no creaste esta cuenta, puedes ignorar este mensaje de forma segura.
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div style="font-weight: bold; color: #374151; margin-bottom: 15px;">
+        Síguenos en nuestras redes sociales
+      </div>
+      <div class="social-icons">
+        <a href="https://wa.me/573145284548" class="social-icon">📱 WhatsApp</a>
+        <a href="#" class="social-icon">📘 Facebook</a>
+        <a href="#" class="social-icon">📷 Instagram</a>
+      </div>
+
+      <div class="small-text">
+        © 2025 Turismo Colombia. Todos los derechos reservados.<br>
+        🇨🇴 Descubre Colombia con nosotros 🌴
+      </div>
+
+      <div class="small-text" style="margin-top: 15px;">
+        ¿Necesitas ayuda? Contáctanos por WhatsApp: +57 314 528 4548
+      </div>
+    </div>
+  </div>
+</body>
+</html>
